@@ -38,7 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        let view = application.windows[0].rootViewController as! ViewController
+        view.handler?.deviceManager.writeCheckedOut()
+        view.handler?.deviceManager.statsManager?.updateDay()
     }
 
 

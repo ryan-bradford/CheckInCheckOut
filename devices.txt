@@ -1,0 +1,40 @@
+2016 1,Retina iPad Cellular
+2016 2,ASUS C100P Chromebook
+2016 3,iPhone 6S 128GB Rose Gold AT&T
+2016 4,iPad Pro 128GB Wi-Fi Cellular Gold AT&T
+2016 5,Microsoft Surface Pro 4
+2016 6,27-inch iMac With Retina 5k Display
+2016 8,ASUS C100P Chromebook
+2016 9,ASUS C100P Chromebook
+2016 10,Microsoft Surface Pro 4
+2016 11,Microsoft Surface Pro 4
+2016 12,Microsoft Surface Pro 4
+2016 13,Microsoft Surface Pro 4
+2016 14,Kindle Fire(Amazon #8)
+2016 15,Kindle Fire(Amazon #9)
+2016 16,Kindle Paperwhite(Amazon #2)
+2016 17,Kindle Paperwhite(Amazon #5)
+2016 18,Kindle Paperwhite(Amazon #3)
+2016 19,Kindle Paperwhite(Amazon #4)
+2016 20,Kindle Voyage(Amazon #6)
+2016 21,Kindle Voyage(Amazon #1)
+2016 22,iPad Air 2 Wi-Fi 64GB - Space Gray
+2016 23,iPad Air 2 Wi-Fi 64GB - Space Gray
+2016 24,iPad Air 2 Wi-Fi 64GB - Space Gray
+2016 25,iPad Air 2 Wi-Fi 64GB - Space Gray
+2016 26,9.7-inch iPad Pro Wi-Fi 128GB - Space Gray
+2016 27,9.7-inch iPad Pro Wi-Fi 128GB - Space Gray
+2016 28,9.7-inch iPad Pro Wi-Fi 128GB - Space Gray
+2016 29,9.7-inch iPad Pro Wi-Fi 128GB - Space Gray
+2016 30,12-inch MacBook Pro 256GB - Space Gray
+2016 31,12-inch MacBook Pro 256GB - Space Gray
+2016 32,27-inch iMac with Retina 5K display
+2016 33,Kindle Oasis
+2016 34,Kindle Oasis
+2016 35,Dell Latitude Windows 7
+2016 36,Dell Latitude Windows 7
+2016 37,Dell Latitude Windows 7
+2016 38,MacBook Pro 15-inch
+2016 39,Kindle
+2016-1,Retina iPad Cellular
+2016-,Decs

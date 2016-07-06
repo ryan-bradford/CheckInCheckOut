@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		942186571D2C045F00624ADE /* CheckOutOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942186561D2C045F00624ADE /* CheckOutOptions.swift */; };
+		942186591D2C051B00624ADE /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942186581D2C051B00624ADE /* OptionButton.swift */; };
+		945F32731D2598140077908C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945F32721D2598140077908C /* Device.swift */; };
+		945F32751D2599070077908C /* devices.txt in Resources */ = {isa = PBXBuildFile; fileRef = 945F32741D2599070077908C /* devices.txt */; };
+		945F32771D25A0690077908C /* checkedOut.txt in Resources */ = {isa = PBXBuildFile; fileRef = 945F32761D25A0690077908C /* checkedOut.txt */; };
+		945F327C1D25A9AE0077908C /* CheckedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945F327B1D25A9AE0077908C /* CheckedOutView.swift */; };
+		9488B3451D26F651008318C9 /* FileWiper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488B3441D26F651008318C9 /* FileWiper.swift */; };
 		94CA4E661D25772C007CB3F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA4E651D25772C007CB3F3 /* AppDelegate.swift */; };
 		94CA4E681D25772C007CB3F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA4E671D25772C007CB3F3 /* ViewController.swift */; };
 		94CA4E6B1D25772C007CB3F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CA4E691D25772C007CB3F3 /* Main.storyboard */; };
@@ -14,6 +21,9 @@
 		94CA4E701D25772C007CB3F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CA4E6E1D25772C007CB3F3 /* LaunchScreen.storyboard */; };
 		94CA4E7B1D25772C007CB3F3 /* CheckInCheckOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA4E7A1D25772C007CB3F3 /* CheckInCheckOutTests.swift */; };
 		94CA4E861D25772C007CB3F3 /* CheckInCheckOutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA4E851D25772C007CB3F3 /* CheckInCheckOutUITests.swift */; };
+		94CA4E981D259592007CB3F3 /* BarcodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA4E971D259592007CB3F3 /* BarcodeHandler.swift */; };
+		94CA4E9A1D25972D007CB3F3 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA4E991D25972D007CB3F3 /* DeviceManager.swift */; };
+		94CA4E9C1D259737007CB3F3 /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA4E9B1D259737007CB3F3 /* StatisticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		942186561D2C045F00624ADE /* CheckOutOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutOptions.swift; sourceTree = "<group>"; };
+		942186581D2C051B00624ADE /* OptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
+		945F32721D2598140077908C /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		945F32741D2599070077908C /* devices.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = devices.txt; path = ../devices.txt; sourceTree = "<group>"; };
+		945F32761D25A0690077908C /* checkedOut.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = checkedOut.txt; sourceTree = "<group>"; };
+		945F327B1D25A9AE0077908C /* CheckedOutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckedOutView.swift; sourceTree = "<group>"; };
+		9488B3441D26F651008318C9 /* FileWiper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileWiper.swift; sourceTree = "<group>"; };
 		94CA4E621D25772C007CB3F3 /* CheckInCheckOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckInCheckOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CA4E651D25772C007CB3F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94CA4E671D25772C007CB3F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +64,9 @@
 		94CA4E811D25772C007CB3F3 /* CheckInCheckOutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckInCheckOutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CA4E851D25772C007CB3F3 /* CheckInCheckOutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInCheckOutUITests.swift; sourceTree = "<group>"; };
 		94CA4E871D25772C007CB3F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94CA4E971D259592007CB3F3 /* BarcodeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeHandler.swift; sourceTree = "<group>"; };
+		94CA4E991D25972D007CB3F3 /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		94CA4E9B1D259737007CB3F3 /* StatisticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		942186551D2C045100624ADE /* CheckOptions */ = {
+			isa = PBXGroup;
+			children = (
+				942186561D2C045F00624ADE /* CheckOutOptions.swift */,
+				942186581D2C051B00624ADE /* OptionButton.swift */,
+			);
+			name = CheckOptions;
+			sourceTree = "<group>";
+		};
+		945F327A1D25A99A0077908C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				945F327B1D25A9AE0077908C /* CheckedOutView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9488B3431D26F646008318C9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				9488B3441D26F651008318C9 /* FileWiper.swift */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
 		94CA4E591D25772C007CB3F3 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +142,13 @@
 		94CA4E641D25772C007CB3F3 /* CheckInCheckOut */ = {
 			isa = PBXGroup;
 			children = (
+				942186551D2C045100624ADE /* CheckOptions */,
+				9488B3431D26F646008318C9 /* Button */,
+				945F327A1D25A99A0077908C /* Views */,
+				945F32741D2599070077908C /* devices.txt */,
+				945F32761D25A0690077908C /* checkedOut.txt */,
+				94CA4E9D1D2597E1007CB3F3 /* Database */,
+				94CA4E961D259583007CB3F3 /* Handler */,
 				94CA4E651D25772C007CB3F3 /* AppDelegate.swift */,
 				94CA4E671D25772C007CB3F3 /* ViewController.swift */,
 				94CA4E691D25772C007CB3F3 /* Main.storyboard */,
@@ -123,6 +175,24 @@
 				94CA4E871D25772C007CB3F3 /* Info.plist */,
 			);
 			path = CheckInCheckOutUITests;
+			sourceTree = "<group>";
+		};
+		94CA4E961D259583007CB3F3 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				94CA4E971D259592007CB3F3 /* BarcodeHandler.swift */,
+				94CA4E991D25972D007CB3F3 /* DeviceManager.swift */,
+				94CA4E9B1D259737007CB3F3 /* StatisticsManager.swift */,
+			);
+			name = Handler;
+			sourceTree = "<group>";
+		};
+		94CA4E9D1D2597E1007CB3F3 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				945F32721D2598140077908C /* Device.swift */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +263,7 @@
 				TargetAttributes = {
 					94CA4E611D25772C007CB3F3 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6324PPSYJF;
 					};
 					94CA4E751D25772C007CB3F3 = {
 						CreatedOnToolsVersion = 7.3;
@@ -229,6 +300,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945F32771D25A0690077908C /* checkedOut.txt in Resources */,
+				945F32751D2599070077908C /* devices.txt in Resources */,
 				94CA4E701D25772C007CB3F3 /* LaunchScreen.storyboard in Resources */,
 				94CA4E6D1D25772C007CB3F3 /* Assets.xcassets in Resources */,
 				94CA4E6B1D25772C007CB3F3 /* Main.storyboard in Resources */,
@@ -256,8 +329,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942186591D2C051B00624ADE /* OptionButton.swift in Sources */,
+				945F327C1D25A9AE0077908C /* CheckedOutView.swift in Sources */,
 				94CA4E681D25772C007CB3F3 /* ViewController.swift in Sources */,
+				94CA4E9C1D259737007CB3F3 /* StatisticsManager.swift in Sources */,
+				94CA4E9A1D25972D007CB3F3 /* DeviceManager.swift in Sources */,
+				945F32731D2598140077908C /* Device.swift in Sources */,
+				94CA4E981D259592007CB3F3 /* BarcodeHandler.swift in Sources */,
 				94CA4E661D25772C007CB3F3 /* AppDelegate.swift in Sources */,
+				942186571D2C045F00624ADE /* CheckOutOptions.swift in Sources */,
+				9488B3451D26F651008318C9 /* FileWiper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,10 +482,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CheckInCheckOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.SDMFoundation.CheckInCheckOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +496,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CheckInCheckOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.SDMFoundation.CheckInCheckOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +571,7 @@
 				94CA4E8C1D25772C007CB3F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94CA4E8D1D25772C007CB3F3 /* Build configuration list for PBXNativeTarget "CheckInCheckOutTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +580,7 @@
 				94CA4E8F1D25772C007CB3F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94CA4E901D25772C007CB3F3 /* Build configuration list for PBXNativeTarget "CheckInCheckOutUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +589,7 @@
 				94CA4E921D25772C007CB3F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
