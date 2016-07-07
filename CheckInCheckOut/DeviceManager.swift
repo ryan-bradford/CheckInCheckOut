@@ -105,24 +105,28 @@ public class DeviceManager {
                 let refreshAlert = UIAlertController(title: "Check In", message: "That Device Was Checked In", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 refreshAlert.addAction(UIAlertAction(title: "Confirm", style: .Default, handler: { (action: UIAlertAction!) in
-                        self.view!.paused = false
+                    self.view!.paused = false
                 }))
                 view?.presentViewController(refreshAlert, animated: true, completion: nil)
             } else {
                 view?.checkedOutView?.backgroundColor = UIColor.greenColor()
                 checkOutDevice(id)
-                UIApplication.sharedApplication().keyWindow?.rootViewController?.becomeFirstResponder()
-                let alert = UIAlertController(title: "Person ID", message: "Please enter a form of identification", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler:{ (alertAction:UIAlertAction) in
-                    let textf1 = alert.textFields![0] as UITextField
-                    let name = textf1.text
-                    self.idScanned(name!)
-                }))
-                alert.addTextFieldWithConfigurationHandler({(textField: UITextField) in
-                    textField.placeholder = "Joe Smith 7811234567"
-                    textField.secureTextEntry = false
-                })
-                UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+                if(id == "2016 40") {
+                    idScanned("Joe Phill")
+                } else {
+                    UIApplication.sharedApplication().keyWindow?.rootViewController?.becomeFirstResponder()
+                    let alert = UIAlertController(title: "Person ID", message: "Please enter a form of identification", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler:{ (alertAction:UIAlertAction) in
+                        let textf1 = alert.textFields![0] as UITextField
+                        let name = textf1.text
+                        self.idScanned(name!)
+                    }))
+                    alert.addTextFieldWithConfigurationHandler({(textField: UITextField) in
+                        textField.placeholder = "Joe Smith 7811234567"
+                        textField.secureTextEntry = false
+                    })
+                    UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+                }
             }
         }
     }

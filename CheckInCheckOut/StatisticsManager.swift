@@ -14,8 +14,8 @@ public class StatisticsManager {
     var inOutFile = "inOut.csv"
     var dailyFile = "daily.csv"
     var devManager: DeviceManager
-    var inOutHeader = "ID,NAME,TOTAL TIME OUT (mins),HOUR CHECKED IN,USE1"
-    var dailyHeader = "Date,Total,9-12 Checks,12-2 Checks,2-4 Checks,Missing Devices,One on One Checks,Trial Use Checks,Lesson Checks,Avg Time Out (mins),Kindle Count,Mac Count,iPad Count,Chromebook Count,Windows Count"
+    var inOutHeader = "ID,NAME,TOTAL TIME OUT (mins),HOUR CHECKED IN,USE"
+    var dailyHeader = "Date,Total,9-12 Checks,12-2 Checks,2-4 Checks,Missing Devices,One on One Checks,Trial Use Checks,Lesson Checks,Avg Time Out (mins),Kindle Count,Mac Count,iPad Count,Chromebook Count,Windows Count,Guest Count"
     init(devManager: DeviceManager) {
         self.devManager = devManager
     }
@@ -72,6 +72,8 @@ public class StatisticsManager {
             let date = String(month) + "-" + String(day) + "-" + String(year)
             
             var totalChecks = 0
+            var toSubtract = 0
+            
             var nineTwelveChecks = 0
             var twelveTwoChecks = 0
             var twoFourChecks = 0
@@ -89,6 +91,7 @@ public class StatisticsManager {
             var kindleCount = 0
             var iPadCount = 0
             var chromebookCount = 0
+            var outsideDevCount = 0
             
             for currentDevice in devManager.devices! {
                 totalChecks += currentDevice.hoursCheckedIn.count
@@ -111,8 +114,12 @@ public class StatisticsManager {
                         lessonUseChecks += 1
                     }
                 }
-                for deviceTime in currentDevice.totalTimeOut! {
-                    totalTime += deviceTime
+                if(currentDevice.deviceID == "2016 40") {
+                    toSubtract++
+                } else {
+                    for deviceTime in currentDevice.totalTimeOut! {
+                        totalTime += deviceTime
+                    }
                 }
                 if(currentDevice.isCheckedOut) {
                     missingDevices += 1
@@ -128,6 +135,8 @@ public class StatisticsManager {
                     windowsCount += currentDevice.hoursCheckedIn.count
                 } else if(upperCase.containsString("CHROMEBOOK")) {
                     chromebookCount += currentDevice.hoursCheckedIn.count
+                } else if(upperCase.containsString("GUEST")) {
+                    outsideDevCount += currentDevice.hoursCheckedIn.count
                 }
             }
             
@@ -136,7 +145,7 @@ public class StatisticsManager {
                 let todaysText = textArr[textArr.count - 1]
                 textArr.removeLast()
                 let todaysTextArr = todaysText.characters.split{$0 == ","}.map(String.init)
-                if(todaysTextArr[0] == date && todaysTextArr.count > 14) {
+                if(todaysTextArr[0] == date && todaysTextArr.count > 15) {
                     totalChecks += Int(todaysTextArr[1])!
                     nineTwelveChecks += Int(todaysTextArr[2])!
                     twelveTwoChecks += Int(todaysTextArr[3])!
@@ -150,9 +159,10 @@ public class StatisticsManager {
                     iPadCount += Int(todaysTextArr[12])!
                     chromebookCount += Int(todaysTextArr[13])!
                     windowsCount += Int(todaysTextArr[14])!
+                    outsideDevCount += Int(todaysTextArr[15])!
                 }
             }
-            totalTime /= Double(totalChecks)
+            totalTime /= Double(totalChecks - toSubtract)
             var today = date + "," + String(totalChecks) + ","
             today += String(nineTwelveChecks) + "," + String(twelveTwoChecks) + ","
             today += String(twoFourChecks) + "," + String(missingDevices)
@@ -163,6 +173,7 @@ public class StatisticsManager {
             today += "," + String(iPadCount)
             today += "," + String(chromebookCount)
             today += "," + String(windowsCount)
+            today += "," + String(outsideDevCount)
             var toWrite = ""
             for part in textArr {
                 toWrite += part + "\n"

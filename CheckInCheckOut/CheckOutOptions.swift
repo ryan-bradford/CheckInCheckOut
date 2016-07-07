@@ -43,6 +43,9 @@ public class CheckOutOptions: UIView {
             }
         }
         toUse!.setCheckedOut(personID!, currentTime: NSDate().timeIntervalSince1970, use: value);
+        if(toUse!.deviceID == "2016 40") {
+            toUse!.setCheckedIn()
+        }
         self.viewController?.checkedOutView?.backgroundColor = UIColor.clearColor()
         self.viewController?.paused = false
         self.removeFromSuperview()
