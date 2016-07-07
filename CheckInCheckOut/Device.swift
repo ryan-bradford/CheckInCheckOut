@@ -41,7 +41,7 @@ public class Device {
     func setCheckedIn() {
         timeCheckedIn = NSDate().timeIntervalSince1970
         let calendar = NSCalendar.currentCalendar()
-        let hourCheckedIn = calendar.component(.NSHourCalendarUnit, fromDate: NSDate())
+        let hourCheckedIn = calendar.component(NSCalendarUnit.Hour, fromDate: NSDate())
         hoursCheckedIn.append(hourCheckedIn)
         personID = nil
         isCheckedOut = false

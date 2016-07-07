@@ -72,7 +72,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         var input: AnyObject?
         
-        var error:NSError?
+        let error:NSError? = nil
         do { input = try AVCaptureDeviceInput(device: captureDevice) } catch _ {
             
         }
@@ -95,7 +95,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         captureSession?.startRunning()
         
         if let connection =  self.videoPreviewLayer?.connection  {
-            var previewLayerConnection : AVCaptureConnection = connection
+            let previewLayerConnection : AVCaptureConnection = connection
             if previewLayerConnection.supportsVideoOrientation {
                 previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.LandscapeRight
             }

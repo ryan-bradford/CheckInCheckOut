@@ -31,7 +31,7 @@ public class StatisticsManager {
             let timeOut = round(1 * (NSDate().timeIntervalSince1970 - device.timeCheckedOut!) / 6) /  10
             device.totalTimeOut?.append(timeOut)
             let calendar = NSCalendar.currentCalendar()
-            let hour = calendar.component(.NSHourCalendarUnit, fromDate: NSDate())
+            let hour = calendar.component(NSCalendarUnit.Hour, fromDate: NSDate())
             var toWrite = ID + "," + name + ","
             toWrite += String(timeOut) + "," + String(hour)
             toWrite += "," + devManager.uses[device.useCheckOut!.last! - 1]
@@ -66,9 +66,9 @@ public class StatisticsManager {
             let text = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
             
             let calendar = NSCalendar.currentCalendar()
-            let day = calendar.component(.NSDayCalendarUnit, fromDate: NSDate())
-            let month = calendar.component(.NSMonthCalendarUnit, fromDate: NSDate())
-            let year = calendar.component(.NSYearCalendarUnit, fromDate: NSDate())
+            let day = calendar.component(NSCalendarUnit.Day, fromDate: NSDate())
+            let month = calendar.component(NSCalendarUnit.Month, fromDate: NSDate())
+            let year = calendar.component(NSCalendarUnit.Year, fromDate: NSDate())
             let date = String(month) + "-" + String(day) + "-" + String(year)
             
             var totalChecks = 0
@@ -115,7 +115,7 @@ public class StatisticsManager {
                     }
                 }
                 if(currentDevice.deviceID == "2016 40") {
-                    toSubtract++
+                    toSubtract += 1
                 } else {
                     for deviceTime in currentDevice.totalTimeOut! {
                         totalTime += deviceTime
@@ -143,9 +143,9 @@ public class StatisticsManager {
             var textArr = text.characters.split{$0 == "\n"}.map(String.init)
             if(textArr.count >= 1) {
                 let todaysText = textArr[textArr.count - 1]
-                textArr.removeLast()
                 let todaysTextArr = todaysText.characters.split{$0 == ","}.map(String.init)
                 if(todaysTextArr[0] == date && todaysTextArr.count > 15) {
+                    textArr.removeLast()
                     totalChecks += Int(todaysTextArr[1])!
                     nineTwelveChecks += Int(todaysTextArr[2])!
                     twelveTwoChecks += Int(todaysTextArr[3])!
