@@ -64,7 +64,6 @@ public class DeviceManager {
                 for device in self.devices! {
                     if device.deviceID == parts[0] {
                         if let currentUse = Int(parts[3]) {
-                            print("We made it")
                             device.setCheckedOut(parts[2], currentTime: Double(parts[1])!, use: currentUse)
                         }
                     }

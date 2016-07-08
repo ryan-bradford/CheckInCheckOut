@@ -142,7 +142,7 @@ public class StatisticsManager {
             
             var textArr = text.characters.split{$0 == "\n"}.map(String.init)
             if(textArr.count >= 1) {
-                let todaysText = textArr[textArr.count - 1]
+                let todaysText = textArr.last!
                 let todaysTextArr = todaysText.characters.split{$0 == ","}.map(String.init)
                 if(todaysTextArr[0] == date && todaysTextArr.count > 15) {
                     textArr.removeLast()
@@ -153,7 +153,10 @@ public class StatisticsManager {
                     oneOnOneChecks += Int(todaysTextArr[6])!
                     trialUseChecks += Int(todaysTextArr[7])!
                     lessonUseChecks += Int(todaysTextArr[8])!
-                    totalTime += Double(todaysTextArr[9])! * Double(todaysTextArr[1])!
+                    if(todaysTextArr[9] != "nan") {
+                        totalTime += Double(todaysTextArr[9])! * (Double(todaysTextArr[1])! - Double(todaysTextArr[15])!)
+                    }
+                    toSubtract += Int(todaysTextArr[15])!
                     kindleCount += Int(todaysTextArr[10])!
                     macCount += Int(todaysTextArr[11])!
                     iPadCount += Int(todaysTextArr[12])!
