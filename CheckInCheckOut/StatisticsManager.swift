@@ -127,7 +127,7 @@ public class StatisticsManager {
                 let upperCase = currentDevice.deviceName.uppercaseString
                 if(upperCase.containsString("MAC")) {
                     macCount += currentDevice.hoursCheckedIn.count
-                } else if(upperCase.containsString("IPad")) {
+                } else if(upperCase.containsString("IPAD")) {
                     iPadCount += currentDevice.hoursCheckedIn.count
                 } else if(upperCase.containsString("KINDLE")) {
                     kindleCount += currentDevice.hoursCheckedIn.count
@@ -153,7 +153,7 @@ public class StatisticsManager {
                     oneOnOneChecks += Int(todaysTextArr[6])!
                     trialUseChecks += Int(todaysTextArr[7])!
                     lessonUseChecks += Int(todaysTextArr[8])!
-                    if(todaysTextArr[9] != "nan") {
+                    if(todaysTextArr[9] != "nan" && todaysTextArr[9] != "inf") {
                         totalTime += Double(todaysTextArr[9])! * (Double(todaysTextArr[1])! - Double(todaysTextArr[15])!)
                     }
                     toSubtract += Int(todaysTextArr[15])!
@@ -165,7 +165,11 @@ public class StatisticsManager {
                     outsideDevCount += Int(todaysTextArr[15])!
                 }
             }
-            totalTime /= Double(totalChecks - toSubtract)
+            if(Double(totalChecks - toSubtract) > 0) {
+                totalTime /= Double(totalChecks - toSubtract)
+            } else {
+                totalTime = 0
+            }
             var today = date + "," + String(totalChecks) + ","
             today += String(nineTwelveChecks) + "," + String(twelveTwoChecks) + ","
             today += String(twoFourChecks) + "," + String(missingDevices)
